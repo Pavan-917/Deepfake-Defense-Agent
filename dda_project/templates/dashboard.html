@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DDA Dashboard</title>
+</head>
+<body>
+  <h1>Deepfake Defense Agent</h1>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <button type="submit">Upload</button>
+  </form>
+  <h2>Processed Media</h2>
+  <ul>
+    {% for file in files %}
+      <li><a href="/uploads/processed/{{ file }}" target="_blank">{{ file }}</a></li>
+    {% endfor %}
+  </ul>
+  <script src="/static/frontend/prevent_capture.js"></script>
+</body>
