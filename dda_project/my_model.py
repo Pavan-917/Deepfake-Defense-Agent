@@ -70,5 +70,3 @@ def predict(model, media_path):
     if frame_path == "temp_frame.jpg":
         os.remove(frame_path)
     return score  # Closer to 1 = deepfake, closer to 0 = real
-
-model = load_model(r'D:\Pavan Kumar\Deepfake Defense\dda_project\models\deepfake_model.pth')
